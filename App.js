@@ -1,6 +1,7 @@
 import { View } from "react-native";
 import ProfileCard from "./components/ProfileCard";
 import QuoteCard from "./components/QuoteCard";
+import TwoColumnCard from "./components/TwoColumnCard";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         quote="You might have problems, but your problems don’t have you."
         author="James Fortune"
       />
+      <TwoColumnCard />
     </View>
   );
 }

@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from "react-native";
+import QuoteCard from "./QuoteCard";
 
 export default function FlexLayout() {
   return (
@@ -6,9 +7,24 @@ export default function FlexLayout() {
       <View style={styles.header}>
         <Text style={styles.text}>Header</Text>
       </View>
-      <View style={styles.body}>
-        <Text style={styles.text}>Body Content</Text>
-      </View>
+      <ScrollView style={styles.body}>
+        <QuoteCard
+          quote="You might have problems, but your problems don’t have you."
+          author="James Fortune"
+        />
+        <QuoteCard
+          quote="You might have problems, but your problems don’t have you."
+          author="James Fortune"
+        />
+        <QuoteCard
+          quote="You might have problems, but your problems don’t have you."
+          author="James Fortune"
+        />
+        <QuoteCard
+          quote="You might have problems, but your problems don’t have you."
+          author="James Fortune"
+        />
+      </ScrollView>
       <View style={styles.footer}>
         <Text style={styles.text}>Footer</Text>
       </View>
@@ -19,29 +35,29 @@ export default function FlexLayout() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "lightblue"
+    backgroundColor: "lightblue",
   },
   header: {
     flex: 1,
-    backgroundColor: 'purple',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "purple",
+    justifyContent: "center",
+    alignItems: "center",
   },
   body: {
     flex: 4,
-    backgroundColor: 'red',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "red",
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
   footer: {
     flex: 1,
-    backgroundColor: '#ffa07a',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "#ffa07a",
+    justifyContent: "center",
+    alignItems: "center",
   },
   text: {
     fontSize: 20,
-    fontWeight: 'bold',
-    color: "white"
+    fontWeight: "bold",
+    color: "white",
   },
 });
